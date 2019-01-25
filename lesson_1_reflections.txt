@@ -1,0 +1,76 @@
+GIT Y GITHUB COURSE
+LESSON 1: VERSION CONTROL  
+
+Comando FC
+Abrimos el simbolo del sistema o command prompt y accedemos a la carpeta en la que 
+tengamos los archivos que vamos a comparar con cd (para Windows y MAC) y el nombre 
+de la carpeta. 
+Luego escribimos FC o diff -u, según estemos en Windows o MAC respectivamente, y 
+luego los nombres de los dos archivos que vamos a comparar, con sus formatos y 
+todo (.java, .xml, .js, …)
+
+Choose a text editor (Sublime) and launch it from the command line
+Primero le asignamos un alias a Sublime para poder launchearlo desde el Git Bash. Para ello, buscamos la ubicación de Sublime, porque la necesitamos de argumento en el comando que vamos a ejecutar a continuación:
+
+echo 'alias subl="C:/Program\ Files/Sublime\ Text\ 2/sublime_text.exe"' >> ~/.bashrc
+
+cerramos y abrimos el bash. Si al poner subl, no se abre Sublime, tenemos que editar
+el contenido de ~/.bash_profile. Para ello, ponemos:
+
+nano ~/.bash_profile
+
+y añadimos las siguientes lineas de codigo:
+
+if [ -r ~/.profile ]; then . ~/.profile; fi
+case "$-" in *i*) if [ -r ~/.bashrc ]; then . ~/.bashrc; fi;; esac
+
+Guardamos con enter, y ahora el bash debería recordar el alias de "subl" y debería
+de poder abrirse el programa.
+
+Creamos la carpeta de Version Control y el archivo txt Reflections (desde Git bash)
+cd ~                          # change directories to your home directory
+mkdir version-control         # make version-control directory
+cd version-control            # go to version-control directory
+mkdir reflections             # create reflections directory
+cd reflections                # go to reflections directory
+subl lesson_1_reflections.txt # launch sublime with file called lesson_1_reflections.txt (you can replace subl with another editor here if you prefer a different one)
+
+Para checkear que se ha creado todo correctamente:
+pwd # print working directory - shows what directory you are in
+ls  # list the files in this directory
+
+################################################################################
+Ejercicios:
+How did viewing a diff between two versions of a file help you see the bug that
+was introduced?
+
+    Fill in your answer here
+
+How could having easy access to the entire history of a file make you a more
+efficient programmer in the long term?
+
+    Fill in your answer here
+
+What do you think are the pros and cons of manually choosing when to create a
+commit, like you do in Git, vs having versions automatically saved, like Google
+docs does?
+
+    Fill in your answer here
+
+Why do you think some version control systems, like Git, allow saving multiple
+files in one commit, while others, like Google Docs, treat each file separately?
+
+    Fill in your answer here
+
+How can you use the commands git log and git diff to view the history of files?
+
+    Fill in your answer here
+
+How might using version control make you more confident to make changes that
+could break something?
+
+    Fill in your answer here
+
+Now that you have your workspace set up, what do you want to try using Git for?
+
+    Fill in your answer here
